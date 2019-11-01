@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebk-Yc-daO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AudioPB View Controller-->
+        <scene sceneID="VJu-yV-1G5">
+            <objects>
+                <viewController id="ebk-Yc-daO" customClass="AudioPBViewController" customModule="AudioCaptureAndPlayback" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nCO-am-qFK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YB5-wV-m46">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem enabled="NO" title="Record" image="record" width="223" id="U83-Z6-E4i" userLabel="Record Bar Button">
+                                        <connections>
+                                            <action selector="recordButtonTapped:" destination="ebk-Yc-daO" id="TQB-IU-Lsd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" title="Play" image="play" width="531" id="yOZ-xX-SJz" userLabel="Play Bar Button">
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="ebk-Yc-daO" id="rlD-gF-4FU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YB5-wV-m46" firstAttribute="leading" secondItem="GYb-Nb-6LK" secondAttribute="leading" id="IuY-F4-zUu"/>
+                            <constraint firstItem="YB5-wV-m46" firstAttribute="bottom" secondItem="GYb-Nb-6LK" secondAttribute="bottom" id="kas-iR-XH9"/>
+                            <constraint firstItem="YB5-wV-m46" firstAttribute="trailing" secondItem="GYb-Nb-6LK" secondAttribute="trailing" id="wF1-1Z-RZl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GYb-Nb-6LK"/>
+                    </view>
+                    <connections>
+                        <outlet property="PlayBarButton" destination="yOZ-xX-SJz" id="53V-lL-nbc"/>
+                        <outlet property="RecordBarButton" destination="U83-Z6-E4i" id="2dY-LX-XoL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pmq-Zv-o96" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="-158"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" width="23" height="24"/>
+        <image name="record" width="24" height="24"/>
+    </resources>
+</document>
